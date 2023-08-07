@@ -40,7 +40,7 @@ python model.py
 Inside the code folder, the data is trained in following format - 
 
 If the Conversation is C1, C2, C3, C4, C5, C6, C7 ...
-| Instance | Training | Labels |
+| Instance | Inputs | Labels |
 |:--------:|:--------:|:------:|
 | First Instance | C1 \<mask\> C3 | C1 C2 C3 |
 | Second Instance | C3 \<mask\> C5 | C3 C4 C5 |
@@ -52,7 +52,7 @@ If the Conversation is C1, C2, C3, C4, C5, C6, C7 ...
 According to the [Dialog Inpainting paper](https://arxiv.org/abs/2205.09073), the data has been created for training by randomly masking a sentence and in the sequence - 
 
 If there are 3 Conversations is C1, C2, C3, C4, C5 ... ; D1, D2, D3, D4, D5 ....  and E1, E2, E3, E4, E5 ...
-| Instance | Training | Labels |
+| Instance | Inputs | Labels |
 |:--------:|:--------:|:------:|
 | First Instance | C1 \<mask\> C3 C4 C5 ..... | C1 C2 C3 C4 C5 .... |
 | Second Instance | D1 D2 D3 \<mask\> D5 ..... | D1 D2 D3 D4 D5 .... |
