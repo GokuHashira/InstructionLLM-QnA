@@ -49,7 +49,14 @@ If the Conversation is C1, C2, C3, C4, C5, C6, C7 ...
 :book: It is to note that only the conversation by the bot in the Taskmaster Dataset is captured.
 
 ### Dialog Inpainting
-TBA
+According to the [Dialog Inpainting paper](https://arxiv.org/abs/2205.09073), the data has been created for training by randomly masking a sentence and in the sequence - 
+
+If there are 3 Conversations is C1, C2, C3, C4, C5 ... ; D1, D2, D3, D4, D5 ....  and E1, E2, E3, E4, E5 ...
+| Instance | Training | Labels |
+|:--------:|:--------:|:------:|
+| First Instance | C1 \<mask\> C3 C4 C5 ..... | C1 C2 C3 C4 C5 .... |
+| Second Instance | D1 D2 D3 \<mask\> D5 ..... | D1 D2 D3 D4 D5 .... |
+| Third Instance | E1 \<mask\> E3 E4 E5 ..... | E1 E2 E3 E4 E5 ..... |
 
 ## Acknowledgments
 My sincere gratitude to my professor [Procheta Sen](https://procheta.github.io/sprocheta/) for actively participating in my research. Her support, guidance, and expertise have shaped its success, inspiring me to strive for academic excellence. I am deeply grateful for their invaluable mentorship, fostering my passion and personal growth.
