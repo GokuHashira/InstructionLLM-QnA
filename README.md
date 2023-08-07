@@ -43,8 +43,8 @@ If the Conversation is C1, C2, C3, C4, C5, C6, C7 ...
 | Instance | Training | Labels |
 |:--------:|:--------:|:------:|
 | First Instance | C1 \<mask\> C3 | C1 C2 C3 |
-| Second Instance | C3 <mask> C5 | C3 C4 C5 |
-| Third Instance | C5 <mask> C7 | C5 C6 C7 |
+| Second Instance | C3 \<mask\> C5 | C3 C4 C5 |
+| Third Instance | C5 \<mask\> C7 | C5 C6 C7 |
 
 :book: It is to note that only the conversation by the bot in the Taskmaster Dataset is captured.
 
