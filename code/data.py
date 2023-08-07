@@ -9,6 +9,14 @@ class DataLoaderFunc:
   def __init__(self, path):
       self.path = path
 
+  def csv_transform(a):
+      l1,l2,l3 = [],[],[]
+      for i in range(len(a)):
+        l1.append(a[i][0][0])
+        l2.append(a[i][1][0])
+        l2.append(a[i][2][0])
+      return l1,l2
+
   def preprocess_data(self, path):
         # This function is responsible for creating csv file from the json files
         speaker = []
@@ -27,14 +35,14 @@ class DataLoaderFunc:
                         convID.append(data[i]["conversation_id"])
         lst = [speaker,conv,convID]
         cols = ["Speaker","Conversation","ConversationID"]
-        with open('./out.csv', 'w') as f:
-            write = csv.writer(f)
-            write.writerow(cols)
-            write.writerows(lst)
+        s,c,ci = DataLoaderFunc.csv_transform(lst)
+        out_data = pd.DataFrame(zip(lst), columns =cols)
+        out_data.head()
+        out_data.to_csv('out.csv', index=False)
 
   def read_data(path_to_csv):
     # This function handles the preprocessing of the data
-    data = pd.read_csv(self.path)
+    data = pd.read_csv(path_to_csv)
     print(data.shape)
     print("Number of conversations: ",len(data["ConversationID"].unique()))
     ids = data["ConversationID"].unique()
