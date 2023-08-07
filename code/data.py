@@ -14,8 +14,8 @@ class DataLoaderFunc:
       for i in range(len(a)):
         l1.append(a[i][0][0])
         l2.append(a[i][1][0])
-        l2.append(a[i][2][0])
-      return l1,l2
+        l3.append(a[i][2][0])
+      return l1,l2,l3
 
   def preprocess_data(self, path):
         # This function is responsible for creating csv file from the json files
@@ -36,7 +36,7 @@ class DataLoaderFunc:
         lst = [speaker,conv,convID]
         cols = ["Speaker","Conversation","ConversationID"]
         s,c,ci = DataLoaderFunc.csv_transform(lst)
-        out_data = pd.DataFrame(zip(lst), columns =cols)
+        out_data = pd.DataFrame(zip(s,c,ci), columns =cols)
         out_data.head()
         out_data.to_csv('out.csv', index=False)
 
@@ -89,7 +89,7 @@ class DataLoaderFunc:
 
     new_data = pd.DataFrame(list(zip(lst, lst2)),columns =['Inputs', 'Labels'])
     new_data.head()
-    new_data.to_csv(r'/content/three_sentenced_data.csv')
+    new_data.to_csv(r'/content/three_sentenced_data.csv', index=False)
   
 ##Calling the Classes
 path = ("/content/Taskmaster/TM-3-2020/data")
