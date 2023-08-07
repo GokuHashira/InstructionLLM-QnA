@@ -1,16 +1,15 @@
 # Importing the necessary packages
 import pandas as pd
 import numpy as np
-import csv
-import json
 import os
+import json
+import csv
 
 class DataLoaderFunc:
   def __init__(self, path):
       self.path = path
-
+      
   def preprocess_data(self, path):
-        # This function is responsible for creating csv file from the json files
         speaker = []
         conv = []
         convID = []
@@ -34,7 +33,7 @@ class DataLoaderFunc:
 
   def read_data(path_to_csv):
     # This function handles the preprocessing of the data
-    data = pd.read_csv(self.path)
+    data = pd.read_csv(path_to_csv)
     print(data.shape)
     print("Number of conversations: ",len(data["ConversationID"].unique()))
     ids = data["ConversationID"].unique()
@@ -81,7 +80,7 @@ class DataLoaderFunc:
 
     new_data = pd.DataFrame(list(zip(lst, lst2)),columns =['Inputs', 'Labels'])
     new_data.head()
-    new_data.to_csv(r'/content/three_sentenced_data.csv')
+    new_data.to_csv(r'./three_sentenced_data.csv')
   
 ##Calling the Classes
 path = ("/content/Taskmaster/TM-3-2020/data")
