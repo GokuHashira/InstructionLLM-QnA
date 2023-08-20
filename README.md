@@ -26,6 +26,9 @@ pip install -r requirements.txt
 ## Approaches to train the data
 ### Code folder
 In the present study, our focus was primarily on the assistant's (AI Agent's) dialogue within conversations. As a result, the dataset was arranged with the following approach: for every set of 3 conversations, the dialogue from the assistant is masked.
+
+![alt text](/images/DialogInpaint.png)
+
 Inside the code folder, the data is trained in following format - 
 
 If the Conversation is C1, C2, C3, C4, C5, C6, C7 ...
