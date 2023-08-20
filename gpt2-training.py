@@ -50,7 +50,7 @@ class GPT2Train:
 
     def train(train_file_path,model_name, output_dir, overwrite_output_dir, per_device_train_batch_size, num_train_epochs, save_steps):
         tokenizer = GPT2Tokenizer.from_pretrained(model_name)
-        train_dataset = load_dataset(train_file_path, tokenizer)
+        train_dataset = GPT2Train.load_dataset(train_file_path, tokenizer)
 
         tokenizer.save_pretrained(output_dir)
 
