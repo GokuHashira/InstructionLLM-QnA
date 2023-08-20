@@ -27,7 +27,7 @@ class DataLoaderFunc:
         json_file_names = [filename for filename in os.listdir(self.path) if filename.endswith('.json')]
         for json_file_name in json_file_names:
             with open(os.path.join(self.path, json_file_name)) as json_file:
-                data = json.load(f)
+                data = json.load(json_file)
                 print("Number of conversations: ",len(data))
                 for i in range(len(data)):
                     for j in range(len(data[i]['utterances'])):
@@ -100,9 +100,9 @@ class DataLoaderFunc:
     out_data.to_csv('dialog_inpainting.csv',index = False)
   
 ##Calling the Classes
-path = ("/content/Taskmaster/TM-3-2020/data")
+path = "/content/Taskmaster/TM-3-2020/data"
 load_data = DataLoaderFunc(path)
 load_data.preprocess_data()
-path_csv = "./out.csv"
+path_csv = "/content/out.csv"
 data, ids = load_data.read_data(path_csv)
 load_data.datagen(data,ids)

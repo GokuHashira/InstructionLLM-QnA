@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ### Code folder
 In the present study, our focus was primarily on the assistant's (AI Agent's) dialogue within conversations. As a result, the dataset was arranged with the following approach: for every set of 3 conversations, the dialogue from the assistant is masked.
 
-![alt text](/images/DialogInpaint.png)
+![alt text](/images/research.png)
 
 Inside the code folder, the data is trained in following format - 
 
@@ -43,7 +43,7 @@ If the Conversation is C1, C2, C3, C4, C5, C6, C7 ...
 ### Dialog Inpainting
 The data utilized for training in the [Dialog Inpainting paper](https://arxiv.org/abs/2205.09073) research involves selecting a random conversation from the dialogues and then masking it. This prepared data is subsequently provided to the T5 Model. The screenshot below gives the glimpse of a random conversation being masked during training with Taskmaster dataset.
 
-![alt text](/home/gkamado/GitHub/InstructionLLM-QnA/images/DialogInpaint.png)
+![alt text](/images/DialogInpainting.png)
 
 If there are 3 Conversations is C1, C2, C3, C4, C5 ... ; D1, D2, D3, D4, D5 ....  and E1, E2, E3, E4, E5 ...
 | Instance | Inputs | Labels |
