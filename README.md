@@ -14,6 +14,8 @@ Aims on building a LLM that is task specific and helpful in QnA based tasks
 ## About
 This repo contains the code based on research on Large Learning models on QnA based data. In the research, we have used the public dataset from [Taskmaster repo](https://github.com/google-research-datasets/Taskmaster/tree/master/TM-3-2020). The data is preprocessed and later train on [Flan-T5 model](https://huggingface.co/docs/transformers/model_doc/flan-t5).
 
+## Data
+The data for this research has been added to /data folder.
 
 ## Requirement
 1. python 3.11 or above
