@@ -71,9 +71,6 @@ python model.py
 ## Acknowledgments
 My sincere gratitude to my professor [Procheta Sen](https://procheta.github.io/sprocheta/) for actively participating in my research. Her support, guidance, and expertise have shaped its success, inspiring me to strive for academic excellence. I am deeply grateful for their invaluable mentorship, fostering my passion and personal growth.
 
-Also I would like to highlight few codes were adapted from
+This project uses code from the following sources:
 
-This code is adapted from [task2kb-resource]
-Source: [https://github.com/username/repository](https://github.com/wangxieric/task2kb-resource/tree/main)
-Author: [Xi Wang]
-License: [MIT License]
+- [task2kb-resource](https://github.com/wangxieric/task2kb-resource/tree/main) by [Xi Wang], licensed under [MIT License].
